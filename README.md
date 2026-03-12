@@ -1,5 +1,7 @@
 # The $50.4M MEV Extraction: A Complete On-Chain Forensic Analysis
 
+> **📢 Part 2 Published:** [PART2-WALLET-TRACE.md](./PART2-WALLET-TRACE.md) — Deep wallet tracing reveals the $50.4M came from Binance, corrects identity misattributions from Part 1, and traces the full $37.2M MEV profit split between Titan Builder ($27.2M) and the MEV bot operator ($10M).
+
 ## Executive Summary
 
 On March 12, 2026 at 18:23:23 UTC, a user swapped 50,432,688 USDT (withdrawn from Aave as aEthUSDT) for just 331 AAVE tokens (~$36,009) through CoW Protocol — a 99.93% loss of value. An MEV bot extracted the difference, paying ~$34.3M to Titan Builder, who kept ~$33.1M (the **largest single-block builder profit in Ethereum history**) and forwarded the proceeds to Coinbase.

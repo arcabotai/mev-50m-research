@@ -1,6 +1,8 @@
 # The $50.4M MEV Extraction: A Complete On-Chain Forensic Analysis
 
-> **📢 Part 3 Published:** [PART3-WALLET-CLUSTER.md](./PART3-WALLET-CLUSTER.md) — The victim wallet is part of a 7-wallet cluster that held $464M USDT. All wallets verified as EOAs, all now drained. Titan Builder refunded $112K before — will they refund $33M? Plus Aave's $600K fee refund and the Morpho flash loan supply chain.
+> **📢 Part 4 Published:** [PART4-GARRETT-JIN.md](./PART4-GARRETT-JIN.md) — The victim identified as Garrett Jin (ex-BitForex CEO). BitForex collapsed under fraud allegations in 2024 ($57M hot wallet drain, HK SFC warning). CoW Protocol deleted its solver safety system 6 weeks before the incident. Aave hardcodes CoW with no price comparison — ParaSwap quotes 13x more.
+>
+> **📢 Part 3:** [PART3-WALLET-CLUSTER.md](./PART3-WALLET-CLUSTER.md) — The victim wallet is part of a 7-wallet cluster (now expanded to 16 wallets) that held $464M+ USDT. All wallets verified as EOAs, all now drained. Titan Builder refunded $112K before — will they refund $33M?
 >
 > **📢 Part 2:** [PART2-WALLET-TRACE.md](./PART2-WALLET-TRACE.md) — Deep wallet tracing reveals the $50.4M came from Binance, corrects identity misattributions from Part 1, and traces the full $37.2M MEV profit split between Titan Builder ($27.2M) and the MEV bot operator ($10M).
 

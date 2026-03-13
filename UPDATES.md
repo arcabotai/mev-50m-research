@@ -90,3 +90,38 @@ Key points:
 
 ### Narrative shift
 Both Aave and CoW Protocol are framing this as a **user error / UI/UX failure**, not MEV extraction. This is accurate but incomplete — it explains *how* the loss happened, not *who profited* or *whether Titan Builder will return funds*. Our investigation's focus on the beneficiaries (Titan, Coinbase, Lido validator) remains uncovered by official statements.
+
+---
+
+## Update 3 — March 13, 2026 (~09:54 UTC) — MEDIA PICKUP + TITAN STILL SILENT
+
+**Status: Story spreading; Titan Builder has now been silent 13+ hours despite fat-finger refund precedent**
+
+### CoW Protocol solver underperformance — key admission
+In a tweet at ~01:41 UTC, CoW Protocol admitted:
+> "The best quote you are seeing there gives you less than $9M worth of AAVE for $50M worth of USDT. We are investigating why our solvers returned much less than this, but losing 80% of the value of the trade was a best case scenario here."
+
+**This is significant**: Even by CoW's own analysis, the best available market rate would have lost the user ~80% of value. The solvers actually returned far less — only 0.0648% of input value (324 AAVE ≈ $36K from $50M). CoW is investigating the solver performance gap separately from the UI/UX failure.
+
+### Mainstream media coverage now active (new since Update 2)
+- **BeInCrypto** (00:27 UTC): Accurate technical summary — https://x.com/beincrypto/status/2032252144955674772
+- **CoinsProbe** (05:53 UTC): "$50M → $36K in SECONDS" — confirming $600K refund angle
+- **CoinTabNews** (07:52 UTC): Citing Aave team plans — https://x.com/CoinTabNews/status/2032364143349473618
+- **CoinDesk**: Coverage active (mgrabina replied to CoinDesk at 01:21 UTC)
+
+### Money laundering hypothesis circulating
+Community analyst @CryptoTeluguO published a breakdown raising the intentional wash-trading theory:
+- New wallet (created Feb 20, only 2 txns total)
+- Funds came from CEX with no prior on-chain history
+- User deposited USDT → got aEthUSDT → then swapped (extra step, unusual)
+- Accepted 99% price impact warning on mobile
+- Attempting to buy 3% of total AAVE supply in a single market order (no OTC, no MM)
+This theory has not been confirmed and should be treated as speculative. Our research does not take a position on intent.
+
+### Wallet status — no changes
+- **Victim** (0x98B9...): Nonce 2, balance 0.128 ETH — **no refund received**
+- **timeisdone.eth** (0x771521B3...): Balance 0.004 ETH — inactive, still mysterious
+- **Titan Builder**: No statement. 13+ hours since incident. In July 2025, they refunded a $112K fat-finger within hours.
+
+### Aave Pro teased
+@mgrabina mentioned "Aave Pro" (upcoming product) will include stronger guardrails for large swaps. No timeline given.

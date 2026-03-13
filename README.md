@@ -1,6 +1,8 @@
 # The $50.4M MEV Extraction: A Complete On-Chain Forensic Analysis
 
-> **📢 Part 2 Published:** [PART2-WALLET-TRACE.md](./PART2-WALLET-TRACE.md) — Deep wallet tracing reveals the $50.4M came from Binance, corrects identity misattributions from Part 1, and traces the full $37.2M MEV profit split between Titan Builder ($27.2M) and the MEV bot operator ($10M).
+> **📢 Part 3 Published:** [PART3-WALLET-CLUSTER.md](./PART3-WALLET-CLUSTER.md) — The victim wallet is part of a 7-wallet cluster that held $464M USDT. All wallets verified as EOAs, all now drained. Titan Builder refunded $112K before — will they refund $33M? Plus Aave's $600K fee refund and the Morpho flash loan supply chain.
+>
+> **📢 Part 2:** [PART2-WALLET-TRACE.md](./PART2-WALLET-TRACE.md) — Deep wallet tracing reveals the $50.4M came from Binance, corrects identity misattributions from Part 1, and traces the full $37.2M MEV profit split between Titan Builder ($27.2M) and the MEV bot operator ($10M).
 
 ## Executive Summary
 

@@ -52,3 +52,41 @@ Thread explaining the mechanics in Spanish — routing went through SushiSwap V2
 - Will Titan Builder follow their precedent of refunding "fat finger" trades (see July 2025: refunded $112K PulseChain incident)?
 - Will the victim come forward publicly?
 - Legal action potential: Binance-linked whale losing $50M+ — pressure on Coinbase (received Titan's profit)?
+
+---
+
+## Update 2 — March 13, 2026 (~03:54 UTC) — COW PROTOCOL OFFICIAL STATEMENT
+
+**New since Update 1: CoW Protocol published their own statement (not captured previously)**
+
+### CoW Protocol / CoW DAO official statement
+Timestamp: March 13, 2026 @ 01:21 UTC
+Tweet: https://x.com/CoWSwap/status/2032265762916757614
+
+Key points:
+- Confirms **no exploit or malicious behavior** — transaction executed per signed order parameters
+- States that **no DEX, aggregator, or liquidity pool** could have filled this at a reasonable price
+- "Preventing users from making trades removes choice and can lead to terrible outcomes"
+- CoW DAO will **also refund their fees** from this transaction (separate from Aave's $600K)
+- Reviewing how to balance "strong safeguards with preserving user autonomy"
+
+### Combined refund picture
+- **Aave**: $600K fee refund (Stani's statement)
+- **CoW DAO**: Their portion of fees also refunded
+- **Total refundable**: Likely a small fraction of total loss — the bulk ($27M+ to Titan/MEV) is not being returned
+
+### Titan Builder status
+- **STILL SILENT** on the March 12, 2026 incident
+- Precedent exists: In July 2025, Titan Builder refunded $112K from a PulseChain fat-finger transaction
+- As of 03:54 UTC March 13, no statement about whether they'll return any of the ~$27M they kept
+
+### timeisdone.eth
+- Resolves to: 0x771521B3Ef07cacebd6dCe76A89A64e2f44b2Cda
+- Balance: 0.004 ETH — no significant activity detected
+
+### Victim wallet
+- Balance: 0.128 ETH — no refund received yet
+- Nonce: 2 — no new outgoing transactions
+
+### Narrative shift
+Both Aave and CoW Protocol are framing this as a **user error / UI/UX failure**, not MEV extraction. This is accurate but incomplete — it explains *how* the loss happened, not *who profited* or *whether Titan Builder will return funds*. Our investigation's focus on the beneficiaries (Titan, Coinbase, Lido validator) remains uncovered by official statements.

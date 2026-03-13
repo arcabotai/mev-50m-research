@@ -158,3 +158,60 @@ Independent confirmation from Ackee (blockchain security):
 
 ### Summary
 No major new statements. Story has hit mainstream (BeInCrypto, CoinDesk, CoinTabNews, multiple crypto analysts). The outstanding narrative is Titan Builder's silence — which, given their fat-finger refund precedent, is becoming a story in itself. Our research angle on the beneficiaries remains the most under-covered aspect of mainstream coverage.
+
+---
+
+## Update 5 — March 13, 2026 (~18:00 UTC) — 🚨 TIMEISDONE.ETH SENT ENCRYPTED MESSAGE TO VICTIM
+
+**Status: HIGH PRIORITY — Mystery wallet contacted the victim on-chain with an encrypted file**
+
+### The message (TX 0x9d9c9f18...afe, block 24,644,206)
+Timestamp: 2026-03-12T21:56:11 UTC — ~9.5 hours after the incident
+
+**timeisdone.eth (0x771521B3...)** sent 0.00031 ETH to the victim wallet with on-chain calldata that decodes to:
+
+> *"dont be sad, youre not the only one who lost. we all lost together xxxxxx https://wormhole.app/87ppZX#hDW2P5zgsKs5wD72jkqiTQ"*
+
+- Wormhole.app is an **end-to-end encrypted file sharing** service — the `#hDW2P5zgsKs5wD72jkqiTQ` in the URL is the client-side decryption key
+- The file is still live as of 18:00 UTC March 13 ("You've got files!")
+- The content of the encrypted file is unknown to outside observers
+
+### Timeline reconstruction for timeisdone.eth
+- **Nonce 1** (21:48 UTC, March 12): Registered "timeisdone.eth" via ENS controller — cost ~0.00248 ETH
+- **Nonce 2** (21:56 UTC, March 12): Sent 0.00031 ETH to victim with encrypted message calldata
+- **Current nonce**: 3 (one additional tx, likely minor)
+- **Current balance**: 0.004681 ETH
+
+### Interpretation
+This is the first known direct contact attempt with the victim. The sender:
+- Is aware of the incident (registered ENS 3.5h after)
+- Knows the victim's wallet address
+- Used an encrypted channel (Wormhole) — private communication, not public
+- Described themselves as someone who "also lost" — possibly a related victim or party claiming shared loss
+
+**Key question**: Who is "we" in "we all lost together"? Candidates:
+1. Another MEV victim claiming losses from the same block
+2. A negotiator or intermediary trying to open recovery dialogue
+3. Titan Builder or MEV bot operator testing anonymous outreach
+4. A sympathizer who lost money in the same AAVE pool arbitrage cascade
+
+### What the encrypted file likely contains
+Wormhole files are typically short-lived text/documents. The message references "together" and "we all lost" — suggesting it may contain:
+- Contact info for a recovery attempt
+- Proof of identity / shared context
+- A negotiation offer
+
+### Victim wallet — still no refund
+- Balance: 0.128 ETH (unchanged from Update 4)
+- Incoming dust: 0.00004 ETH from unknown bot addresses (likely address poisoning scams)
+- **No response from victim wallet to timeisdone.eth**
+
+### Titan Builder — still silent (~28 hours)
+No statement. Community pressure continues. Our investigation's focus on Titan remains the most under-covered angle.
+
+### Media / social — no new major statements
+- Stani posted about EF mandate (unrelated to incident) at 14:23 UTC
+- Mainstream coverage stable (BeInCrypto, CoinDesk, CoinTelegraph)
+- No new technical analyses beyond those already documented
+
+---

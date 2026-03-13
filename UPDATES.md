@@ -125,3 +125,36 @@ This theory has not been confirmed and should be treated as speculative. Our res
 
 ### Aave Pro teased
 @mgrabina mentioned "Aave Pro" (upcoming product) will include stronger guardrails for large swaps. No timeline given.
+
+---
+
+## Update 4 — March 13, 2026 (~15:54 UTC) — INDEPENDENT ANALYSIS + TITAN 20HRS SILENT
+
+**Status: Monitoring — No major new developments; Titan silence now deafening**
+
+### Josef Gattermayer (Ackee security firm) analysis — 10:34 UTC
+Tweet: https://x.com/jgattermayer/status/2032404840152711437
+
+Independent confirmation from Ackee (blockchain security): 
+- "MEV bots raced to arb the price dislocation. The winner tipped Titan Builder $35M for block inclusion and kept $10M."
+- Noteworthy: his numbers suggest Titan got **$35M** (vs our $27.2M in Part 1) — suggests possible ETH price discrepancy in our initial calculation
+- Multiple community analysts (kkashi_yt, CryptoTeluguO, BIC) also converging on ~$34M to Titan
+- **Action item**: Verify ETH price used in our Part 1 analysis; may need a correction note
+
+### Titan Builder — 20+ hours of silence
+- Last tweet from @titanbuilderxyz: Feb 13, 2026 (pre-incident)
+- Precedent: In July 2025, Titan refunded a $112K fat-finger **within hours** of the incident
+- At $33M+ kept, the scale is 290x larger — silence may be deliberate
+- Community pressure growing; BIC_headlines coverage framing them as "record $34M revenue" day
+
+### Victim wallet (0x98B9D979...)
+- Balance: 0.128 ETH — **no refund received**
+- Only incoming: tiny dust amounts (0.00004 ETH from unknown address, 1e-07 ETH x3 from 0x1555fe...) — likely scam/airdrop bots targeting the victim
+- **No contact established publicly between Aave and the victim**
+
+### timeisdone.eth (0x771521B3...)
+- Balance: 0.004681 ETH (minimal increase)
+- Nonce: 3 — minimal on-chain activity, still unexplained
+
+### Summary
+No major new statements. Story has hit mainstream (BeInCrypto, CoinDesk, CoinTabNews, multiple crypto analysts). The outstanding narrative is Titan Builder's silence — which, given their fat-finger refund precedent, is becoming a story in itself. Our research angle on the beneficiaries remains the most under-covered aspect of mainstream coverage.

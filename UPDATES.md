@@ -157,7 +157,7 @@ Independent confirmation from Ackee (blockchain security):
 - Nonce: 3 — minimal on-chain activity, still unexplained
 
 ### Summary
-No major new statements. Story has hit mainstream (BeInCrypto, CoinDesk, CoinTabNews, multiple crypto analysts). The outstanding narrative is Titan Builder's silence — which, given their fat-finger refund precedent, is becoming a story in itself. Our research angle on the beneficiaries remains the most under-covered aspect of mainstream coverage.
+No major new statements. Story has hit mainstream (BeInCrypto, CoinDesk, CoinTabNews, multiple crypto analysts). The outstanding narrative is Titan Builder's silence — which, given their fat-finger refund precedent, is becoming a story in itself. Our research angle on the beneficiaries (Titan, Coinbase, Lido validator) remains the most under-covered aspect of mainstream coverage.
 
 ---
 
@@ -305,3 +305,101 @@ The COSMODROME piece argues: if those fees were supposed to go to the DAO (as th
 - Titan Builder statement — if it comes, it's a major development
 - Whether Aave successfully contacts the victim (Garrett Jin)
 - Wormhole encrypted message: victim has not publicly responded to timeisdone.eth
+
+---
+
+## Update 8 — March 15, 2026 (~00:00 UTC) — 🚨 BOTH OFFICIAL POST MORTEMS PUBLISHED
+
+**Status: HIGH PRIORITY — Both Aave and CoW Protocol released full technical post mortems within the last hour. Key facts change.**
+
+### 1. Aave Official Post Mortem
+Published: March 14, 2026 @ 23:18 UTC (~42 minutes ago)
+Tweet: https://x.com/aave/status/2032959512244518962
+Retweeted by Stani: https://x.com/StaniKulechov/status/2032960303613325687
+
+#### Key revelations that update our prior research:
+
+**Actual fee amount correction**: Aave collected **$110,368** in fees (25 bps on $50.4M), NOT the ~$600K cited in Stani's early statement. The $600K appears to have been a rough early estimate. Aave is holding $110,368 to return to the victim upon verification.
+
+**User confirmation confirmed on mobile**: Aave's internal audit trail confirms the user "manually acknowledged the strong warning by clicking the checkbox" on a mobile device while opted into cookies. The checkbox text read: *"I confirm the swap with a potential 100% value loss."*
+
+**CoW Swap solver flow** (technical clarification):
+- Solver contract (0x699...d35c8) redeemed aUSDT → raw USDT on Aave V3
+- Routed $50.4M USDT through **UniswapV3 USDT/WETH pool** → received 17,957.81 WETH (~$37.3M)
+- Routed WETH through **SushiSwap AAVE/WETH pool** → bought 331.3053 AAVE (~$36.9K)
+- Deposited AAVE → minted 331.3053 aEthAAVE
+- Sent 327.24 aEthAAVE to user; solver kept 4.064 aEthAAVE (~$452) as surplus
+
+**Note**: Aave explicitly states the WETH received (17,957 WETH ≈ $37.3M) was the real-time market output from Uniswap. The MEV extraction in our research occurred via *backrunning* of this execution — the Uniswap pool was moved, creating an arb opportunity. Our investigation into where the remaining ~$50M went remains valid.
+
+**Aave Shield**: New feature being deployed. By default blocks any swap with >25% price impact. Advanced users must go to Settings to disable it.
+
+**Victim has NOT contacted Aave**.
+
+---
+
+### 2. CoW Protocol Official Post Mortem
+Published: March 14, 2026 (same evening)
+Tweet: https://x.com/CoWSwap/status/2032959076502581623
+
+This is the most technically detailed analysis to date. Key findings:
+
+#### Phase 1 — Quote failure
+- Three solvers responded to the initial quote request
+- **Solver C** (the best quote) was rejected by CoW's hardcoded **12M gas unit ceiling** — legacy code that couldn't evaluate complex multi-hop routes. The route needed ~20M gas units (above the current Fusaka hardfork limit anyway — would have reverted regardless)
+- **Solver B** failed legitimately
+- **Solver A's** quote (the worst, ~329 AAVE) was selected as the only verified quote
+- Even the best unverified quotes implied ~90% value loss — this was an unfillable order at any price in one execution
+
+#### Phase 2 — Second auction on aToken pair
+- CoW submitted a second quote competition for the aToken pair (aUSDT→aAAVE)
+- This did NOT change the limit price already set by Phase 1's Solver A quote
+
+#### Phase 3 — **Solver E compounding failure (NEW — not previously known)**
+- **Solver E** found a favorable execution route and **WON AUCTIONS #12479347 and #12479350**
+- Solver E submitted NO transactions onchain for either win — two consecutive DNAs (Did Not Arrive)
+- After failing twice, Solver E **stopped bidding entirely**
+- **Solver B** (worst execution) won Auction #12479353 by default — the only auction Solver E didn't compete in
+- This means: if Solver E had executed, the outcome would have been meaningfully better. It failed twice and abandoned the order.
+
+#### Phase 4 — **Mempool Leak (CRITICAL — Under Active Investigation)**
+- Solver submitted transaction via **private RPC mempool**
+- Etherscan shows a **"confirmed within 30 seconds"** tag — this tag ONLY appears when Etherscan observed the tx in the public mempool BEFORE block inclusion
+- **Transactions submitted exclusively via private mempools do NOT carry this tag**
+- Evidence strongly suggests the transaction leaked from private to public mempool
+- This would explain the highly competitive backrunning in block 24,643,151
+- **Investigation ongoing** — CoW Protocol has not named the suspected leak source
+- Titan Builder built the block — their position in relation to the mempool leak is a key open question
+
+#### CoW Protocol's framing
+"A warning checkbox, however clearly displayed, is a blunt instrument when the stakes reach $50M. The gap between what a user intends and what they confirm can be enormous, especially on mobile, under time pressure..."
+
+They acknowledge this is a structural DeFi UX challenge, not just a CoW-specific problem.
+
+---
+
+### What this changes in our investigation
+
+| Claim | Previous | Updated |
+|-------|----------|---------|
+| Aave fee collected | ~$600K (rough estimate) | **$110,368** (confirmed) |
+| User confirmation | Assumed auto-accepted | **Manually confirmed** on mobile, "100% value loss" checkbox |
+| Why backrunning was so competitive | Assumed private flow | **Possible mempool leak** from private RPC (under investigation) |
+| Solver performance | "Solvers did poorly" | **Solver E won twice but never submitted** — mystery failure |
+| Titan involvement | Block builder, kept proceeds | Same — but **mempool leak implication** links Titan more directly |
+
+**Our core findings remain intact**: The value flow (Titan keeping ~$27-35M, Coinbase routing, Lido validator, MEV bot operator) was correctly identified. The mempool leak investigation, if confirmed, would add a significant layer to the Titan Builder angle.
+
+---
+
+### On-chain status (March 15, 2026 ~00:00 UTC)
+- **Victim** (0x98B9D979...): Balance 0.128 ETH — **no refund received (~58 hours post-incident)**
+- **timeisdone.eth** (0x771521B3...): Balance 0.004681 ETH — no significant activity
+- **Titan Builder**: **Still SILENT — 58+ hours**. Post mortems published; no response from them.
+
+### Outstanding open items
+1. **Solver E identity**: Who is Solver E, and why did they win twice and fail to execute?
+2. **Mempool leak source**: Did the private tx leak via Titan's infrastructure? Via CoW's private RPC provider?
+3. **Titan Builder response**: Both official post mortems are now public. If Titan responds, it's major.
+4. **Victim contact**: Aave confirmed victim hasn't reached out. $110,368 in fees being held.
+5. **Marc Zeller / Aave governance**: Still no response to the Labs vs DAO fee dispute angle.

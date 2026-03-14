@@ -269,3 +269,39 @@ The COSMODROME piece argues: if those fees were supposed to go to the DAO (as th
 - Any Aave governance forum post about the $600K refund (whose money is it?)
 - Titan Builder — silence at 44h is now a story in itself
 
+
+---
+
+## Update 7 — March 14, 2026 (~21:54 UTC) — TITAN BUILDER 52H SILENT; NO REFUND TO VICTIM
+
+**Status: Monitoring — No major new developments. Titan silence now at 52+ hours.**
+
+### Titan Builder — 52+ hours of silence
+- As of 21:54 UTC March 14, Titan Builder has made **zero public statement** about the $50M incident
+- Their last tweet was Feb 13, 2026 (pre-incident)
+- Precedent comparison: In July 2025, Titan refunded a $112K fat-finger within hours
+- At $27-35M kept (depending on analyst's ETH price), this is 250-310x larger — silence appears deliberate
+- Community pressure building; @KRFsocial (03:29 UTC Mar 14) published sharp Ethereum PBS critique: "ethereum community captured just 2.4% of MEV value while 2 players captured 96%. That's not redistribution. That's capture."
+
+### Victim wallet — still no refund (52+ hours)
+- Balance: 0.128 ETH — unchanged
+- No incoming transactions detected since incident block
+- Aave said they would "try to make contact" — no public confirmation they reached the victim
+- timeisdone.eth (0x771521B3...): No new significant on-chain activity
+
+### No Marc Zeller / Aave governance response
+- COSMODROME tagged @marczeller_ (Aave Chan Initiative) in their Dec fee dispute analysis earlier today
+- No public response from Zeller as of this check
+- No Aave governance forum proposals detected regarding the $600K refund or the Labs vs DAO fee dispute
+
+### International / mainstream spread
+- @blockonomi (05:21 UTC Mar 14): Coverage with "13 linked wallets" and Binance connection, referencing the broader cluster
+- @jimmyitsopen: Chinese-language thread (08:38 UTC Mar 14) breaking down the $41M MEV distribution — story reaching Chinese crypto media
+- Multiple Spanish, Chinese, and mainstream crypto outlets now covering the story
+
+### What to watch
+- Marc Zeller / Aave governance response to the Dec fee dispute angle
+- Whether @rektHQ or @zachxbt pick up the story (neither has posted as of this check)
+- Titan Builder statement — if it comes, it's a major development
+- Whether Aave successfully contacts the victim (Garrett Jin)
+- Wormhole encrypted message: victim has not publicly responded to timeisdone.eth

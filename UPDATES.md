@@ -215,3 +215,57 @@ No statement. Community pressure continues. Our investigation's focus on Titan r
 - No new technical analyses beyond those already documented
 
 ---
+
+---
+
+## Update 6 — March 14, 2026 (~14:00 UTC) — NEW ANALYSIS: THE $600K REFUND MAY NOT BE AAVE'S TO GIVE
+
+**Status: Notable new context — COSMODROME Forensic Intelligence published deep background**
+
+### New independent analysis: "Aave: The CoW Swap Thread"
+Published: March 14, 2026 ~13:00 UTC
+Author: COSMODROME Forensic Intelligence (@CosmodromeX)
+Article: https://medium.com/@Cosmodrome-eng./aave-the-cow-swap-thread-3bc5a2486cc7
+Tweet: https://x.com/CosmodromeX/status/2032809542929756437
+Tagged: @rektHQ @zachxbt @marczeller_
+
+**Engagement as of 14:00 UTC: 1 like, 0 retweets — very early/small account**
+
+### Key findings in the analysis
+
+#### 1. Correct framing of the mechanism (confirms our investigation)
+- The incident was **price impact (99%)**, not slippage — confirms what we and mgrabina established
+- Correctly notes the quote already showed ~140 AAVE before confirmation
+- CoW's architecture has **no circuit breaker** for this class of failure — "the system functioned as designed"
+- "CoW DAO is technically correct that no exploit occurred. That statement also confirms the architecture has no hard minimum liquidity ratio requirement."
+
+#### 2. THE CRITICAL NEW ANGLE: December fee dispute context
+This is the significant new information — the background context behind the $600K refund:
+
+- **December 4, 2025**: CoW Swap integration into aave.com was announced
+- **December 13, 2025**: On-chain analyst (EzR3aL) revealed swap fees from the new integration were flowing to wallets controlled by **Aave Labs** — NOT to the Aave DAO treasury
+- Under the prior **ParaSwap** integration, referral surplus went to DAO since 2022 (~$1.1M in 2025 alone)
+- Under CoW Swap, 15-25bps fees on every swap flowed to Aave Labs — **annualized impact: $10M+**
+- **Marc Zeller** (Aave Chan Initiative, largest delegate): called this "stealth privatization"
+- **Stani's response**: "The interface is Aave Labs' product. Labs funds it, builds it, and is entitled to monetize it. The DAO is free to build its own interface."
+
+#### 3. The $600K refund framing — "fees it may not own"
+The COSMODROME piece argues: if those fees were supposed to go to the DAO (as the December dispute established), Stani returning $600K from Aave Labs' wallet may be returning money whose ownership is itself contested. The refund is simultaneously a PR gesture AND an implicit stake in the Labs-vs-DAO revenue dispute.
+
+### What this adds to our investigation
+1. The $600K refund amount is not random — it's Aave Labs returning fees from a fee stream that the DAO was already contesting
+2. The CoW Swap integration itself carries pre-existing controversy (Dec 2025 fee dispute)
+3. Marc Zeller (@marczeller_) is tagged in the COSMODROME tweet — he was the delegate who called out the fee dispute. His response (if any) would be significant
+4. The routing into a $73K AAVE pool (690:1 order:pool ratio) remains unanswered by CoW Protocol's official statement
+
+### Wallet status — no changes
+- **Victim** (0x98B9D979...): Balance 0.128 ETH — **no refund received (~44 hours post-incident)**
+- **timeisdone.eth** (0x771521B3...): Resolves intact, minimal activity
+- **Titan Builder**: **Still silent (~44 hours)**
+
+### What to watch
+- Marc Zeller response to COSMODROME tagging him
+- Whether @rektHQ or @zachxbt pick up the December fee dispute angle
+- Any Aave governance forum post about the $600K refund (whose money is it?)
+- Titan Builder — silence at 44h is now a story in itself
+

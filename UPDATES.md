@@ -403,3 +403,38 @@ They acknowledge this is a structural DeFi UX challenge, not just a CoW-specific
 3. **Titan Builder response**: Both official post mortems are now public. If Titan responds, it's major.
 4. **Victim contact**: Aave confirmed victim hasn't reached out. $110,368 in fees being held.
 5. **Marc Zeller / Aave governance**: Still no response to the Labs vs DAO fee dispute angle.
+
+---
+
+## Update 9 — March 15, 2026 (~01:54 UTC) — POST-MORTEM COMMUNITY RESPONSE + GOVERNANCE WARNING RESURFACES
+
+**Status: Minor update — Post-mortems generating community discussion; key governance figure speaks out**
+
+### Community reactions to official post-mortems (new since Update 8)
+
+Following the Aave and CoW Protocol post-mortems published ~23:18 UTC March 14:
+
+**@k_schellinger (Kevin Schellinger) — 00:59 UTC March 15**
+Tweet: https://x.com/k_schellinger/status/2032985018918707620
+Explicitly linked this incident to his prior warning about the Aave Labs proposal:
+> "This is exactly what I warned about in the recent Aave Labs proposal. The protocol wasn't the issue. The product built on top was."
+
+This connects back to our Update 6 coverage of the December fee dispute (CoW Swap integration, fees flowing to Labs not DAO). A governance-level dissenter had already flagged the structural conflict before the incident.
+
+**@nonce_ns (AURL) — 00:10 UTC March 15**
+Tweet: https://x.com/nonce_ns/status/2032972685551321568
+In reply to CoW's post-mortem: "CoW cannot hide behind 'permissionless' when your own post-mortem admits outdated quote checks, solver failures, and **possible mempool leakage**. This was not just user error — it was a systemic execution failure."
+
+**@identicaldonut (Timo) — 00:50 UTC March 15**: "Wait i thought CoW had MEV protection? Do they not?"
+**@m_ousep — 01:52 UTC March 15**: "where did the 49.965 million go?" — the answer is in our Part 1 blog.
+
+### On-chain status — unchanged (~60 hours post-incident)
+- **Victim** (0x98B9D979...): Balance 0.128 ETH — **no refund received**
+- **timeisdone.eth** (0x771521B3...): Balance 0.004681 ETH — no new activity
+- **Titan Builder**: **~60 hours of silence** — no statement despite both official post-mortems now public
+- **CoW Solver E identity**: Still unknown
+
+### What to watch
+- Titan Builder response (if they respond to the mempool leak implication in CoW's post-mortem, that's major)
+- Marc Zeller on the governance/Labs fee dispute (Kevin Schellinger's comment may prompt Zeller to weigh in)
+- "where did the $50M go?" gap in mainstream coverage — our Part 1 directly answers @m_ousep's viral question
